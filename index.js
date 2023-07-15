@@ -4,8 +4,6 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import 'dotenv';
 
-/* import postRoutes from './routes/post.js';
-import userRoutes from './routes/user.js'; */
 import gameRoutes from './routes/game.js';
 
 const app = express();
@@ -13,9 +11,7 @@ const app = express();
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
-/* app.use('/posts', postRoutes);
-app.use('/users', userRoutes);
- */
+
 app.use('/game', gameRoutes);
 
 app.get('/', (req, res) => {
